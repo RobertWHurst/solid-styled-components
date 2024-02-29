@@ -14,7 +14,7 @@ export interface CSSAttribute extends CSSProperties {
 type StylesGenerator<P = {}> =
   (props: P) => CSSAttribute | string;
 type TagStyleGenerator<P = {}> =
-  (props: P) => number | string | undefined;
+  (props: P) => number | string | false | 0 | null | undefined;
 type TagArgs<P = {}> = Array<string | TagStyleGenerator<P>>;
 type StylesArg<P = {}> =
   | string
